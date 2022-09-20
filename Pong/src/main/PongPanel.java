@@ -131,7 +131,7 @@ import javax.swing.Timer;
          Graphics2D g2d = (Graphics2D) g.create();
              Stroke dashed = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{9}, 0);
              g2d.setStroke(dashed);
-             g2d.setPaint(Color.WHITE);
+             g2d.setPaint(Color.GREEN);
              g2d.drawLine(getWidth() / 2, 0, getWidth() / 2, getHeight());
              g2d.dispose();
       }
@@ -143,17 +143,18 @@ import javax.swing.Timer;
   
       @Override
       public void keyPressed(KeyEvent event) {
+    	  // Changed paddle move speed
           if (event.getKeyCode() == KeyEvent.VK_UP) {
-        	  paddle2.setyVelocity(-1);
+        	  paddle2.setyVelocity(-3);
           }
           else if (event.getKeyCode() == KeyEvent.VK_DOWN) {
-        	  paddle2.setyVelocity(1);
+        	  paddle2.setyVelocity(3);
           }
           if (event.getKeyCode() == KeyEvent.VK_W) {
-        	  paddle1.setyVelocity(-1);
+        	  paddle1.setyVelocity(-3);
           }
           else if (event.getKeyCode() == KeyEvent.VK_S) {
-        	  paddle1.setyVelocity(1);
+        	  paddle1.setyVelocity(3);
           }
       }
   
